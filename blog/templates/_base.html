@@ -1,3 +1,5 @@
+{# blog\templates\_base.html #}
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -65,13 +67,12 @@
         {% block content %}{% endblock %}
     </div>
 
-    {# Esse trecho não funciona de `'show_aside': False` na view #}
+    {# Esse trecho não funciona se `'show_aside': False` na view #}
     {% if show_aside %}
     <div class="main-aside p-3 bg-dark-subtle">
         {% block aside %}{% endblock %}
     </div>
     {% endif %}
-
 </main>
 
     <footer class="container bg-dark text-light rounded-top">
